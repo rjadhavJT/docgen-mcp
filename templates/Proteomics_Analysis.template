@@ -1,0 +1,42 @@
+{{metadata:name:Proteomics Analysis Documentation}}
+{{metadata:description:Template for Proteomics analysis documentation}}
+{{metadata:category:proteomics}}
+{{metadata:requiredSources:presentation,script}}
+
+# {{projectId}} Proteomics Analysis
+
+Department: DATA
+
+Notebook ID: {{projectId}}
+
+Experiment Title: {{projectId}} Proteomics Analysis
+
+Date: {{date}}
+
+Project ID: {{projectId}}
+
+Lead Researcher: 
+
+## 1. Objective
+
+{{section:objective}}
+
+## 2. Materials and Equipment
+
+{{section:materials}}
+
+## 3. Methods
+
+{{section:methods}}
+
+## 4. Results
+
+{{section:results}}
+
+## 5. Conclusions
+
+{{section:conclusions}}
+
+## 6. References
+
+{{section:references}}
