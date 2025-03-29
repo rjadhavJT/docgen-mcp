@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 export interface TemplateMetadata {
   name: string;
@@ -15,7 +16,12 @@ export interface Template {
   metadata: TemplateMetadata;
 }
 
-const TEMPLATES_DIR = path.join(process.cwd(), 'templates');
+// Get current module's path (ES modules compatible)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Navigate to the templates directory relative to the repository root
+const TEMPLATES_DIR = path.join(path.dirname(path.dirname(__dirname)), 'templates');
 
 export async function loadTemplate(templateType: string): Promise<Template> {
   try {
